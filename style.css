@@ -7,7 +7,8 @@
     padding: 0;
 }
 body{
-    background: #999;
+    /* background: ; */
+    background-image: linear-gradient(#734b98e5, #00000070), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     color: #111111;
     font-family: Poppins;
     min-height: 100vh;
@@ -27,6 +28,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .fcc-head{
     /* color: aliceblue; */
@@ -39,11 +41,12 @@ body{
     font-style: italic;
 }
 .wrap{
-    width: 70vw;
+    width: 60vw;
     border: 2px solid;
     border-radius: 10px;
-    background: #257bdd8c;
+    background: radial-gradient(#0b0a1ae7, #05133373);
     padding: 10px;
+    color: #ebe6dd;
 }
 .form-div{
     display: flex;
@@ -53,4 +56,32 @@ body{
     border: 2px solid #773535;
     padding: 12px;
     min-height: 100vh;
+}
+.form-div>input, .form-div>select, .form-div>textarea{
+    height: 40px;
+    padding: 5px 10px;
+    background: #e4e2e2;
+    color: #00030e;
+    font-size: 0.851rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-div>textarea{
+    height: 20vmin;
+    margin: 1rem 0;
+}
+
+
+@media(max-width: 850px){
+    .wrap{
+        width: 90vw;
+    }
+}
+
+@media(max-width: 550px){
+    .wrap{
+        width: 97vw;
+    }
 }
