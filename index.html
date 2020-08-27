@@ -28,14 +28,14 @@
             </div>
 
             <div class="form-field">
-              <label for="age" class="form-label" id="number-label">Age <span class="form-label-option">(option)</span> : </label>
+              <label for="number" class="form-label" id="number-label">Age <span class="form-label-option">(optional)</span> : </label>
               <input type="number" min="0" max="110" class="form-box" name="age" id="number" placeholder="Age" required>
             </div>
 
             <div class="form-field">
               <label for="dropdown" class="form-label">Which option best describes your current role? : </label>
               <select name="role" class="form-box form-selection" name="role" id="dropdown">
-                <option selected desabled="" value="">select current role</option>
+                <option selected desabled value="">select current role</option>
                 <option value="Student">Student</option>
                 <option value="Full-Tile-Job">Full-Tile-Job</option>
                 <option value="Full-Time-Leaner">Full-Time-Leaner </option>
@@ -58,9 +58,9 @@
                   Maybe
                 </label>
                 
-                <label class="form-radio-label" for="maybe">
-                  <input type="radio" class="form-radio" name="recommend" id="maybe" value="recommend">
-                  Maybe
+                <label class="form-radio-label" for="Not-sure">
+                  <input type="radio" class="form-radio" name="recommend" id="Not-sure" value="Not-sure">
+                  Not sure
                 </label>
               
               </div>
@@ -69,7 +69,7 @@
             <div class="form-field">
               <label for="feature" class="form-label">What is your favorite feature of freeCodeCamp? : </label>
               <select name="feature" class="form-box form-selection" name="feature" id="feature">
-                <option selected desabled="" value="">Select An Option</option>
+                <option selected desabled value="">Select An Option</option>
                 <option value="challenges">Challenges</option>
                 <option value="projects">projects</option>
                 <option value="community">Community</option>
@@ -91,52 +91,58 @@
                   <input type="checkbox" name="back-end" id="back-end" value="true" class="form-checkbox" >
                   Back-end Projects
                 </label>
-
-                  <!-- <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                    <label for=""></label>
-
-                    <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label>
-
-                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                  <label for=""></label> -->
                   
+                <label for="vishualizaion">
+                  <input type="checkbox" name="dv" id="vishualizaion" value="true" class="form-checkbox" >
+                  Data Visualization
+                </label>
                   
-                  <!-- 
-                    Back-end Projects
-                    Data Visualization
-                    Challenges
-                    Open Source Community
-                    Gitter help rooms
-                    Videos
-                    City Meetups
-                    Wiki
-                    Forum
-                    Additional Courses -->
+                <label for="chall">
+                  <input type="checkbox" name="chall" id="chall" value="true" class="form-checkbox" >
+                  Challenges
+                </label>
+                  
+                <label for="ossc">
+                  <input type="checkbox" name="ossc" id="ossc" value="true" class="form-checkbox" >
+                  Open Source Community
+                </label>
+                  
+                <label for="hroom">
+                  <input type="checkbox" name="hroom" id="hroom" value="true" class="form-checkbox" >
+                  Gitter help rooms
+                </label>
+                  
+                <label for="video">
+                  <input type="checkbox" name="video" id="video" value="true" class="form-checkbox" >
+                  Videos
+                </label>
+                  
+                <label for="meetup">
+                  <input type="checkbox" name="meetup" id="meetup" value="true" class="form-checkbox" >
+                  City Meetups
+                </label>
+                  
+                <label for="Wiki">
+                  <input type="checkbox" name="Wiki" id="Wiki" value="true" class="form-checkbox" >
+                  Wiki
+                </label>
+                  
+                <label for="Forum">
+                  <input type="checkbox" name="Forum" id="Forum" value="true" class="form-checkbox" >
+                  Forum
+                </label>
+                  
+                <label for="adcours">
+                  <input type="checkbox" name="adcours" id="adcours" value="true" class="form-checkbox" >
+                  Additional Courses
+                </label>
+
                 </div>
               </div>
 
               <div class="form-field">
-                <label for="comments" class="form-label">Any comments or suggestions?</label>
-                <textarea name="comment" id="comments" cols="30" rows="10"></textarea>
+                <label for="comments" class="form-label">Any comments or suggestions? : </label>
+                <textarea name="comment" id="comments" placeholder="Enter Your Comments here..."></textarea>
               </div>
 
             <button id="submit">Submit</button>
