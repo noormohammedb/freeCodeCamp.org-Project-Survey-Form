@@ -10,108 +10,136 @@
 
   <div class="container">
       <div class="heading">
-        <h1 class="fcc-head">freeCodeCamp Survey Form</h1>
-        <p class="fcc-head-caption"> Thank you for taking the time to help us improve the platform </p>
+        <h1 id="title" class="fcc-head">freeCodeCamp Survey Form</h1>
+        <p id="description" class="fcc-head-caption"> Thank you for taking the time to help us improve the platform </p>
       </div>
     
       <div class="wrap">
-        <form action="">
+        <form action="" id="survey-form">
           <div class="form-div">
-            <label for="name" class="form-label">Name : </label>
-            <input type="text" class="form-box" name="name" id="name" placeholder="Enter Your Name">
-            
-            <label for="email" class="form-label">Emai : </label>
-            <input type="text" class="form-box" name="email" id="email" placeholder="Enter Your Email">
-            
-            <label for="age" class="form-label">Age <span class="form-label-option">(option)</span> : </label>
-            <input type="text" class="form-box" name="age" id="age" placeholder="Age">
-            
-            <label for="role" class="form-label">Which option best describes your current role? : </label>
-            <select name="role" class="form-box form-selection" name="role" id="role">
-              <option selected desabled="" value="">select current role</option>
-              <option value="Student">Student</option>
-              <option value="Full-Tile-Job">Full-Tile-Job</option>
-              <option value="Full-Time-Leaner">Full-Time-Leaner </option>
-              <option value="Prefer-Not-To-say">Prefer Not To say </option>
-              <option value="Other">Other</option>
-            </select>
-            
-            <label for="recommend" class="form-label form-raido-main-label">Would you recommend freeCodeCamp to a friend? : </label>
-            <div class="form-radio-div">
-
-              <input type="radio" class="form-radio" name="recommend" id="definitely">
-              <label class="form-radio-label" for="definitely">Definitely</label>
-
-              <input type="radio" class="form-radio" name="recommend" id="maybe">
-              <label class="form-radio-label" for="maybe">Maybe</label>
-
-              <input type="radio" class="form-radio" name="recommend" id="maybe">
-              <label class="form-radio-label" for="maybe">Maybe</label>
-
+            <div class="form-field">
+              <label for="name" class="form-label" id="name-label">Name : </label>
+              <input type="text" class="form-box" name="name" id="name" placeholder="Enter Your Name" required>
             </div>
 
-            <label for="feature" class="form-label">What is your favorite feature of freeCodeCamp? : </label>
-            <select name="feature" class="form-box form-selection" name="feature" id="feature">
-              <option selected desabled="" value="">Select An Option</option>
-              <option value="challenges">Challenges</option>
-              <option value="projects">projects</option>
-              <option value="community">Community</option>
-              <option value="open-source">Open Source</option>
-            </select>
+            <div class="form-field">
+              <label for="email" class="form-label" id="email-label">Emai : </label>
+              <input type="email" class="form-box" name="email" id="email" placeholder="Enter Your Email" required>
+            </div>
 
-            <label for="improve" class="form-label"> What would you like to see improved? <span class="improve-span">(Check all that apply)</span> : </label>
+            <div class="form-field">
+              <label for="age" class="form-label" id="number-label">Age <span class="form-label-option">(option)</span> : </label>
+              <input type="number" min="0" max="110" class="form-box" name="age" id="number" placeholder="Age" required>
+            </div>
+
+            <div class="form-field">
+              <label for="dropdown" class="form-label">Which option best describes your current role? : </label>
+              <select name="role" class="form-box form-selection" name="role" id="dropdown">
+                <option selected desabled="" value="">select current role</option>
+                <option value="Student">Student</option>
+                <option value="Full-Tile-Job">Full-Tile-Job</option>
+                <option value="Full-Time-Leaner">Full-Time-Leaner </option>
+                <option value="Prefer-Not-To-say">Prefer Not To say </option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="recommend" class="form-label form-raido-main-label">Would you recommend freeCodeCamp to a friend? : </label>
+              <div class="form-radio-div">
+
+                <label class="form-radio-label" for="definitely">
+                  <input type="radio" class="form-radio" name="recommend" id="definitely" value="definitely">
+                  Definitely
+                </label>
+
+                <label class="form-radio-label" for="maybe">
+                  <input type="radio" class="form-radio" name="recommend" id="maybe" value="maybe">
+                  Maybe
+                </label>
+                
+                <label class="form-radio-label" for="maybe">
+                  <input type="radio" class="form-radio" name="recommend" id="maybe" value="recommend">
+                  Maybe
+                </label>
+              
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="feature" class="form-label">What is your favorite feature of freeCodeCamp? : </label>
+              <select name="feature" class="form-box form-selection" name="feature" id="feature">
+                <option selected desabled="" value="">Select An Option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">projects</option>
+                <option value="community">Community</option>
+                <option value="open-source">Open Source</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+
+              <label for="improve" class="form-label"> What would you like to see improved? <span class="improve-span">(Check all that apply)</span> : </label>
               <div class="improve-div">
-                <input type="checkbox" id="front-end" name="front-end" value="front-end" class="form-checkbox" >
-                <label for=front-end>Front-end Projects</label>
 
-                <input type="checkbox" name="back-end" id="back-end" value="true" class="form-checkbox" >
-                <label for="back-end">Back-end Projects</label>
-
-                <!-- <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label>
-
-                <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
-                <label for=""></label> -->
-
-
-                  <!-- 
+                <label for=front-end>
+                  <input type="checkbox" id="front-end" name="front-end" value="front-end" class="form-checkbox" >
+                  Front-end Projects
+                </label>
+                
+                <label for="back-end">
+                  <input type="checkbox" name="back-end" id="back-end" value="true" class="form-checkbox" >
                   Back-end Projects
-                  Data Visualization
-                  Challenges
-                  Open Source Community
-                  Gitter help rooms
-                  Videos
-                  City Meetups
-                  Wiki
-                  Forum
-                  Additional Courses -->
-            </div>
+                </label>
 
-            <label for="comments" class="form-label">Any comments or suggestions?</label>
-            <textarea name="comment" id="comments" cols="30" rows="10"></textarea>
+                  <!-- <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                    <label for=""></label>
 
-            <input type="button" value="Submit">
+                    <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label>
+
+                  <input type="checkbox" name="" id="" value="true" class="form-checkbox" >
+                  <label for=""></label> -->
+                  
+                  
+                  <!-- 
+                    Back-end Projects
+                    Data Visualization
+                    Challenges
+                    Open Source Community
+                    Gitter help rooms
+                    Videos
+                    City Meetups
+                    Wiki
+                    Forum
+                    Additional Courses -->
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="comments" class="form-label">Any comments or suggestions?</label>
+                <textarea name="comment" id="comments" cols="30" rows="10"></textarea>
+              </div>
+
+            <button id="submit">Submit</button>
           </div>
         </form>
       </div>
@@ -121,7 +149,7 @@
 
 
   <!-- partial:index.partial.html -->
-<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <!-- 
 
